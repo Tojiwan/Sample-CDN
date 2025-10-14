@@ -1,72 +1,32 @@
 # Hosting JavaScript Files on a CDN (jsDelivr / unpkg)
 
-This guide explains how to host your JavaScript file on a free CDN using GitHub and jsDelivr or unpkg.
+## This guide explains how to host your JavaScript file on a free CDN using GitHub and jsDelivr or unpkg. jsDelivr automatically serves files from any public GitHub repository — no extra configuration needed.
 
-Option 1: Use jsDelivr (Recommended)
+### Steps:
 
-jsDelivr automatically serves files from any public GitHub repository — no extra configuration needed.
+1. Create a GitHub Repository
 
-Steps:
+2. Go to https://github.com/new
 
-Create a GitHub Repository
+3. Name it (e.g., my-widget)
 
-Go to https://github.com/new
+4. Set it to Public
 
-Name it (e.g., my-widget)
+5. Click Create Repository
 
-Set it to Public
+6. Upload your JS file
 
-Click Create Repository
+7. Upload your file (e.g., widget.js and the css of the chat widget ui.css) into the repository.
+8. Commit the file to the main branch.
 
-Upload your JS file
-
-Upload your file (e.g., widget.js) into the repository.
-
-Commit the file to the main branch.
-
-Get the CDN URL
+9. Get the CDN URL
 Replace yourusername and reponame in this template:
-https://cdn.jsdelivr.net/gh/yourusername/reponame@main/filename.js
+### https://cdn.jsdelivr.net/gh/yourusername/reponame@main/filename.js
 
-Example:
-https://cdn.jsdelivr.net/gh/mackydev/my-widget@main/widget.js
+### Example:
+https://cdn.jsdelivr.net/gh/sample123/my-widget@main/widget.js
 
-Use it in your website
-Add the script tag to your HTML:
-
-<script src="https://cdn.jsdelivr.net/gh/mackydev/my-widget@main/widget.js"></script>
-
-(Optional) Versioning
-To use a specific commit or version tag:
-https://cdn.jsdelivr.net/gh/yourusername/reponame@v1.0.0/widget.js
-
-Option 2: Use unpkg (Alternative)
-
-unpkg also fetches files directly from GitHub or npm.
-
-Same as above — upload your file to a public GitHub repo.
-Use this link format:
-https://unpkg.com/yourusername/reponame@main/filename.js
-
-Example:
-https://unpkg.com/mackydev/my-widget@main/widget.js
-
-Tips:
-
-Cache control: jsDelivr caches files globally; changes may take a few minutes to update.
-
-File updates: just push to GitHub — no manual upload needed.
-
-Private repos: jsDelivr and unpkg work only with public repositories.
-
-Example:
-
-Repository:
-https://github.com/mackydev/my-widget
-
-CDN URL:
-https://cdn.jsdelivr.net/gh/mackydev/my-widget@main/widget.js
-
-Usage:
-
-<script src="https://cdn.jsdelivr.net/gh/mackydev/my-widget@main/widget.js"></script>
+### Use it in your website
+### Add the script tag to your HTML:
+- <script src="https://cdn.jsdelivr.net/gh/(github username)/(repository name)@main/widget.js"></script>
+- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/(github username)/Sample-CDN@master/chat_widget.css"> // For CSS
