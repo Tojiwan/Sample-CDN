@@ -1,4 +1,4 @@
-Hosting JavaScript Files on a CDN (jsDelivr / unpkg)
+# Hosting JavaScript Files on a CDN (jsDelivr / unpkg)
 
 This guide explains how to host your JavaScript file on a free CDN using GitHub and jsDelivr or unpkg.
 
