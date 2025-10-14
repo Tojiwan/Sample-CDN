@@ -36,7 +36,7 @@
 
     let sessionId = localStorage.getItem("n8n-chat/sessionId");
     if (!sessionId) {
-        sessionId = crypto.randomUUID();
+        sessionId = window.crypto.randomUUID();
         localStorage.setItem("n8n-chat/sessionId", sessionId);
     }
 
@@ -116,4 +116,5 @@
     });
     closeBtn.addEventListener("click", () => (panel.style.display = "none"));
 })();
+
 
