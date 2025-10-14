@@ -1,6 +1,6 @@
 (() => {
     const BRAND          = "Tigernethost";
-    const WEBHOOK        = "https://n8n.tigernethost.com/webhook/cdefd253-6cb3-4ae7-b5b6-598f6253d410/chat";
+    const WEBHOOK        = "https://n8n.tigernethost.com/webhook/ca5c97de-8d6e-4a5c-b923-4de2f1240092/chat";
     const CHAT_INPUT_KEY = "chatInput";
 
     // Create HTML elements dynamically
