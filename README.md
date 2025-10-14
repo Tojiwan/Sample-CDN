@@ -21,7 +21,7 @@
 
 9. Get the CDN URL
 Replace yourusername and reponame in this template:
-### https://cdn.jsdelivr.net/gh/yourusername/reponame@main/filename.js
+https://cdn.jsdelivr.net/gh/yourusername/reponame@main/filename.js
 
 ### Example:
 https://cdn.jsdelivr.net/gh/sample123/my-widget@main/widget.js
