@@ -1,0 +1,221 @@
+/* Base reset for the widget container only */
+.cw-panel,
+.cw-launcher,
+.cw-panel * {
+    box-sizing: border-box;
+}
+
+/* Launcher button */
+.cw-launcher {
+    position: fixed;
+    left: max(16px, env(safe-area-inset-left, 16px));
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
+    z-index: 9999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50% !important;
+    background: #ff8a65;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.12s ease;
+}
+
+.cw-launcher:hover {
+    transform: translateY(-1px);
+}
+
+.cw-launcher svg {
+    width: 28px;
+    height: 28px;
+}
+
+.cw-header, .cw-quick, .cw-footer { flex: 0 0 auto; }
+
+/* Panel */
+.cw-panel{
+  position: fixed;
+  left: max(16px, env(safe-area-inset-left, 16px));
+  bottom: calc(max(16px, env(safe-area-inset-bottom, 16px)) + 64px);
+  z-index: 9999;
+  width: 360px;
+  max-width: 92vw;
+  height: 80vh;          /* your desired height */
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+  border: 1px solid rgba(0,0,0,.06);
+
+  /* IMPORTANT: start closed */
+  display: none;
+
+  /* layout when opened (set via JS) */
+  /* do NOT put another display:flex here, we will set it in JS */
+  flex-direction: column;
+}
+
+/* Header */
+.cw-header {
+    background: #ff8a65;
+    color: #fff;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cw-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.cw-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+/* Body (messages) */
+.cw-body {
+    background: #fafafa;
+    padding: 12px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+/* Quick chips (separate row above footer) */
+.cw-quick {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.cw-chip {
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Footer (input + send) */
+.cw-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.cw-input {
+    flex: 1;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 12px;
+    outline: none;
+}
+
+.cw-send {
+    height: 42px;
+    min-width: 72px;
+    border: none;
+    background: #ff8a65;
+    color: #fff;
+    border-radius:10px !important ; 
+    cursor: pointer;
+}
+
+/* Bubbles */
+.cw-row {
+    display: flex;
+    margin: 8px 0;
+}
+
+.cw-row.cw-you {
+    justify-content: flex-end !important;
+}
+
+.cw-row.cw-bot {
+    justify-content: flex-start !important;
+}
+
+.cw-bubble {
+    max-width: 78%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.35;
+    white-space: pre-wrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.cw-bot .cw-bubble {
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.cw-you .cw-bubble {
+    background: #e8f0ff;
+    border: 1px solid #c7d7fa;
+}
+
+/* Typing indicator */
+.cw-typing {
+    font-size: 12px;
+    color: #999;
+    padding: 2px 12px 6px;
+}
+
+.cw-dots {
+    display: inline-block;
+}
+
+.cw-dots span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 3px;
+    background: #aaa;
+    border-radius: 50%;
+    animation: cw-blink 1.2s infinite ease-in-out;
+}
+
+.cw-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.cw-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes cw-blink {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
