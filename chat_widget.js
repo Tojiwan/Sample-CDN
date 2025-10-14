@@ -1,6 +1,6 @@
 (() => {
     const BRAND          = "Tigernethost";
-    const WEBHOOK        = "https://n8n.tigernethost.com/webhook/90376d72-25af-4826-9a0b-72a3967f8c57";
+    const WEBHOOK        = "https://n8n.tigernethost.com/webhook/cdefd253-6cb3-4ae7-b5b6-598f6253d410/chat";
     const CHAT_INPUT_KEY = "chatInput";
 
     // Create HTML elements dynamically
@@ -116,3 +116,4 @@
     });
     closeBtn.addEventListener("click", () => (panel.style.display = "none"));
 })();
+
