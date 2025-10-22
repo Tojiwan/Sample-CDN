@@ -1,13 +1,11 @@
 (() => {
   const CHAT_INPUT_KEY = "chatInput";
   const currentScript = document.currentScript;
-  const BRAND = scriptUrl.searchParams.get("brand");
-
   // Create a URL object to easily parse parameters
   const scriptUrl = new URL(currentScript.src);
-
-  // Extract your parameter(s)
+  // Extract your parameter(s) - for the webhook
   const id = scriptUrl.searchParams.get("id");
+  const BRAND = scriptUrl.searchParams.get("brand");
 
   const WEBHOOK = `https://n8n.tigernethost.com/webhook/${id}/chat`;
 
