@@ -28,5 +28,8 @@ https://cdn.jsdelivr.net/gh/sample123/my-widget@main/widget.js
 
 ### Use it in your website
 ### Add the script tag to your HTML:
-- <script src="https://cdn.jsdelivr.net/gh/(github username)/(repository name)@main/widget.js"></script>
+- <script src="https://cdn.jsdelivr.net/gh/(github username)/(repository name)@main/widget.js?id=(secret webhook ID)"></script>
 - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/(github username)/Sample-CDN@master/chat_widget.css"> // For CSS
+
+## IMPORTANT NOTES!
+- This will only work if you have an access to a workflow coming from n8n, also need a secret webhook ID for it to work.
