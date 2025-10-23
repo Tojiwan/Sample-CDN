@@ -6,7 +6,6 @@
   const scriptUrl = new URL(currentScript.src);
   // Extract your parameter(s)
   const id = scriptUrl.searchParams.get("id");
-
   const WEBHOOK = `https://n8n.tigernethost.com/webhook/${id}/chat`;
 
   // Create HTML elements dynamically
